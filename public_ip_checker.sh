@@ -7,8 +7,8 @@ IPV4FILE="$HOME/current_ipv4.txt"
 IPV6FILE="$HOME/current_ipv6.txt"
 
 # Get current IP addrs
-CURRENT_IPV4=$(curl -s ifconfig.me)
-CURRENT_ipV6=$(curl -s -6 ipconfig.co)
+CURRENT_IPV4=$(curl -s -4 ifconfig.me)
+CURRENT_IPV6=$(curl -s -6 ifconfig.me)
 
 # Check and log IPv4 changes
 if [ ! -f "IPV4FILE" ]; then
